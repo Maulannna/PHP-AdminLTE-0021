@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Blank Page</title>
+  <title>AdminLTE 3 | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -13,43 +13,35 @@
   <link rel="stylesheet" href="public/AdminLTE/dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
-<!-- Site wrapper -->
-<div class="wrapper">
-  <!-- Navbar -->
-  
-  <!-- /.navbar -->
+
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.php?page=home" class="brand-link<?php echo (isset($_GET['page']) && $_GET['page'] == 'home') || !isset($_GET['page']) ? 'active' : ''; ?>">>
+    <a href="index.php?page=home" class="brand-link<?php echo (isset($_GET['page']) && $_GET['page'] == 'home') || !isset($_GET['page']) ? 'active' : ''; ?>">
       <img src="public/AdminLTE/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">PokeStore</span>
     </a>
 
     <!-- Sidebar -->
     <div class="sidebar">
-
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          
           <li class="nav-item">
-            <a href="index.php?page=barang" class="nav-link<?php echo (isset($_GET['page']) && $_GET['page'] == 'barang') ? 'active' : ''; ?>" >
+            <a href="index.php?page=barang" class="nav-link <?php echo (isset($_GET['page']) && $_GET['page'] == 'barang') ? 'active' : ''; ?>">
               <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Barang</p>
+              <p>Barang</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="index.php?page=pelanggan" class="nav-link<?php echo (isset($_GET['page']) && $_GET['page'] == 'pelanggan') ? 'active' : ''; ?>">
+            <a href="index.php?page=pelanggan" class="nav-link <?php echo (isset($_GET['page']) && $_GET['page'] == 'pelanggan') ? 'active' : ''; ?>">
               <i class="nav-icon far fa-circle text-warning"></i>
               <p>Pelanggan</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="index.php?page=transaksi" class="nav-link<?php echo (isset($_GET['page']) && $_GET['page'] == 'transaksi') ? 'active' : ''; ?>">
+            <a href="index.php?page=transaksi" class="nav-link <?php echo (isset($_GET['page']) && $_GET['page'] == 'transaksi') ? 'active' : ''; ?>">
               <i class="nav-icon far fa-circle text-info"></i>
               <p>Transaksi</p>
             </a>
@@ -68,18 +60,15 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Pelanggan </h1>
+            <h1>Data Tansaksi</h1>
           </div>
-         
         </div>
-      </div><!-- /.container-fluid -->
+      </div>
     </section>
-
-    <!-- Main content -->
     <section class="content">
 
-      <!-- Default box -->
-      <div class="card">
+<!-- Default box -->
+<div class="card">
         <div class="card-header">
         
         <a href="index.php?page=tambah_transaksi" class="btn btn-info btn-sm bg-success<?php echo (isset($_GET['page']) && $_GET['page'] == 'tambah_transaksi') ? 'active' : ''; ?>" >Tambahkan Data</a>
@@ -143,34 +132,26 @@
         <!-- /.card-footer-->
       </div>
       <!-- /.card -->
+<!-- /.card -->
 
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+</section>
+<!-- /.content -->
 
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
+</div>
+<div class="content">
+<footer class="main-footer">
+    <div class="float-right d-none d-sm-block ms-5">
       <b>Version</b> 3.2.0
     </div>
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
 </div>
-<!-- ./wrapper -->
-
+<
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<script src="public/AdminLTE/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="public/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
+<script src="public/AdminLTE/dist/js/adminlte.min.js"></script>
 </body>
 </html>
