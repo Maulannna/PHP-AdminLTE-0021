@@ -14,19 +14,7 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
-<div class="wrapper">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php" class="nav-link">Home</a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
+
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -139,7 +127,7 @@
         </div>
         <div class="card-body">
           <div class="progress-group">
-            Susu Formula 1
+            Mie Indomie
             <span class="float-right"><b>60%</b></span>
             <div class="progress progress-sm">
               <div class="progress-bar bg-success" style="width: 60%"></div>
@@ -147,7 +135,7 @@
           </div>
 
           <div class="progress-group">
-            Yakult
+            Mie Sarimi
             <span class="float-right"><b>30%</b></span>
             <div class="progress progress-sm">
               <div class="progress-bar bg-info" style="width: 30%"></div>
@@ -155,7 +143,7 @@
           </div>
 
           <div class="progress-group">
-            Promina Satu
+            Minyak ABC
             <span class="float-right"><b>20%</b></span>
             <div class="progress progress-sm">
               <div class="progress-bar bg-secondary" style="width: 20%"></div>
@@ -163,7 +151,7 @@
           </div>
 
           <div class="progress-group">
-            Jamu Anak 1
+            Beras PP
             <span class="float-right"><b>10%</b></span>
             <div class="progress progress-sm">
               <div class="progress-bar bg-dark" style="width: 10%"></div>
