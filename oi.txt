@@ -1,0 +1,146 @@
+-- Membuat tabel Bukuxxxx
+CREATE TABLE Bukuxxxx (
+    kdbuku VARCHAR(10) PRIMARY KEY,
+    judul VARCHAR(50),
+    th_terbit INT
+);
+
+-- Memasukkan data ke tabel Bukuxxxx
+INSERT INTO Bukuxxxx VALUES 
+('B-01', 'Sistem Basis Data', 2020),
+('B-02', 'Pintar Berbahasa Inggris', 2019),
+('B-03', 'Statistik Dasar', 2021),
+('B-04', 'Visual Basic', 2018);
+
+-- Membuat tabel Peminjamanxxxx
+CREATE TABLE Peminjamanxxxx (
+    no_pinjam VARCHAR(10) PRIMARY KEY,
+    tgl_pinjam DATE,
+    tgl_kembali DATE,
+    kdbuku VARCHAR(10),
+    FOREIGN KEY (kdbuku) REFERENCES Bukuxxxx(kdbuku)
+);
+
+-- Memasukkan data ke tabel Peminjamanxxxx
+INSERT INTO Peminjamanxxxx VALUES 
+('p001', '2023-11-03', '2023-11-06', 'B-01'),
+('p002', '2023-11-03', '2023-11-09', 'B-02'),
+('p003', '2023-11-04', '2023-11-06', 'B-03'),
+('p004', '2023-11-04', '2023-11-06', 'B-03'),
+('p005', '2023-11-05', '2023-11-11', 'B-04');
+
+1. CREATE VIEW View1 AS
+SELECT 
+    kdbuku,
+    CONCAT('judulnya ', judul, ' tahun terbit ', th_terbit) AS deskripsi
+FROM Bukuxxxx;
+
+2. CREATE VIEW View2 AS
+SELECT 
+    no_pinjam,
+    tgl_kembali,
+    DATE_FORMAT(tgl_kembali, '%M %d, %Y') AS format_tanggal_kembali,
+    CURRENT_TIME() AS waktu_sistem_sekarang
+FROM Peminjamanxxxx;
+
+3. CREATE VIEW View3 AS
+SELECT 
+    b.kdbuku,
+    b.judul,
+    p.no_pinjam,
+    p.tgl_kembali
+FROM Bukuxxxx b
+LEFT JOIN Peminjamanxxxx p
+ON b.kdbuku = p.kdbuku;
+
+4. CREATE VIEW View4 AS
+SELECT 
+    no_pinjam,
+    tgl_pinjam,
+    YEAR(tgl_pinjam) AS tahun_tgl_pinjam,
+    DATEDIFF(tgl_kembali, tgl_pinjam) AS tanggal_pinjam
+FROM Peminjamanxxxx;
+
+5. CREATE VIEW View5 AS
+SELECT 
+    p.no_pinjam,
+    b.kdbuku,
+    b.judul,
+    p.tgl_pinjam
+FROM Bukuxxxx b
+LEFT JOIN Peminjamanxxxx p
+ON b.kdbuku = p.kdbuku;
+
+
+-- Membuat tabel Bukuxxxx
+CREATE TABLE Bukuxxxx (
+    kdbuku VARCHAR(10) PRIMARY KEY,
+    judul VARCHAR(50),
+    th_terbit INT
+);
+
+-- Memasukkan data ke tabel Bukuxxxx
+INSERT INTO Bukuxxxx VALUES 
+('B-01', 'Sistem Basis Data', 2020),
+('B-01-2', 'Pintar Berbahasa Inggris', 2019),
+('B-01-3', 'Statistik Dasar', 2021),
+('B-01-4', 'Visual Basic', 2015);
+
+-- Membuat tabel Peminjamanxxxx
+CREATE TABLE Peminjamanxxxx (
+    no_pinjam VARCHAR(10) PRIMARY KEY,
+    tgl_pinjam DATE,
+    tgl_kembali DATE,
+    kdbuku VARCHAR(10),
+    FOREIGN KEY (kdbuku) REFERENCES Bukuxxxx(kdbuku)
+);
+
+-- Memasukkan data ke tabel Peminjamanxxxx
+INSERT INTO Peminjamanxxxx VALUES 
+('p001', '2023-11-03', '2023-11-06', 'B-01-3'),
+('p002', '2023-11-03', '2023-11-07', 'B-01-4'),
+('p003', '2023-11-04', '2023-11-06', 'B-01'),
+('p004', '2023-11-04', '2023-11-06', 'B-01-3'),
+('p005', '2023-11-05', '2023-11-11', 'B-01-4');
+
+1. CREATE VIEW View1 AS
+SELECT 
+    kdbuku,
+    CONCAT(judul, ', ', th_terbit) AS deskripsi
+FROM Bukuxxxx;
+
+2. CREATE VIEW View2 AS
+SELECT 
+    no_pinjam,
+    tgl_pinjam,
+    DATE_FORMAT(tgl_pinjam, '%d-%M-%Y') AS format_tanggal_pinjam,
+    CURRENT_TIME() AS waktu_sistem_sekarang
+FROM Peminjamanxxxx;
+
+3. CREATE VIEW View3 AS
+SELECT 
+    p.no_pinjam,
+    p.tgl_pinjam,
+    b.kdbuku,
+    b.judul
+FROM Peminjamanxxxx p
+JOIN Bukuxxxx b ON p.kdbuku = b.kdbuku;
+
+4. CREATE VIEW View4 AS
+SELECT 
+    no_pinjam,
+    tgl_pinjam,
+    DAYNAME(tgl_pinjam) AS hari_tgl_pinjam,
+    MONTHNAME(tgl_pinjam) AS bulan_tgl_pinjam
+FROM Peminjamanxxxx;
+
+5. CREATE VIEW View5 AS
+SELECT 
+    b.kdbuku,
+    b.judul,
+    p.no_pinjam,
+    p.tgl_kembali
+FROM Bukuxxxx b
+LEFT JOIN Peminjamanxxxx p ON b.kdbuku = p.kdbuku;
+
+
